@@ -1,0 +1,45 @@
+<html>
+    <!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    
+  </head>
+   <body>
+      
+      <form action = "{{ url_for('submit') }}" method = "POST">
+         <h3>Patient Information</h3>
+         Pregnancies<br>
+         <input type = "number" name = "Pregnancies" /></br>
+
+         Glucose<br>
+         <input type = "number" name = "Glucose" /></br>
+         
+         BloodPressure<br>
+         <input type = "number" name = "BloodPressure" /></br>
+         
+         SkinThickness<br>
+         <input type = "number" name = "SkinThickness" /></br>
+         
+         Insulin<br>
+         <input type = "number" name = "Insulin" /></br>
+         BMI<br>
+         <input type = "number" name = "BMI" /></br>
+         Age<br>
+         <input type = "number" name = "Age" /></br>
+
+         
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </form>
+      
+   </body>
+</html>
+
+
+
+
+
