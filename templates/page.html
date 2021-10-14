@@ -17,7 +17,7 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-	    <img src="image.jpg" alt="Girl in a jacket" width="500" height="600">
+	   <image src="{{url_for('static',filename = 'image.jpg')}}" >
     	<input type="number" name="Pregnancies" placeholder="Pregnancies" required="required" />
         <input type="number" name="Glucose	" placeholder="Glucose" required="required" />
 		<input type="number" name="BloodPressure" placeholder="BloodPressure" required="required" />
