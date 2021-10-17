@@ -17,8 +17,16 @@ def home():
 
 @app.route("/predict", methods = ['POST'])
 def predict():
-    float_features = [int(x) or float(x) for x in request.form.values()]
-    features = [np.array(float_features)]
+    float_features = [x  for x in request.form.values()]
+    y = []
+    for i in float_features:
+          if '.' in i :
+              x = float(i)
+              y.append(i)
+          else:
+              y.append(i)
+    
+    features = [np.array(y)]
     prediction = model.predict(features)
     
     return render_template("page.html", prediction_text = "the Output is 1: Yes and 0:No   {}".format(prediction))
