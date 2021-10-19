@@ -28,8 +28,12 @@ def predict():
     
     features = [np.array(y)]
     prediction = model.predict(features)
+    if prediction == 1:
+        z = 'Yes'
+    else:
+        z = 'No'
     
-    return render_template("page.html", prediction_text = "the Output is 1: Yes and 0:No   {}".format(prediction))
+    return render_template("page.html", prediction_text = "The Patient having diabetic  is  :  {}".format(z))
 
 
 
